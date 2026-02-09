@@ -96,11 +96,10 @@ if TYPE_CHECKING:
     from typing_extensions import Self, TypeAlias
 
 warnings.warn(
-    "pkg_resources is deprecated as an API. "
-    "See https://setuptools.pypa.io/en/latest/pkg_resources.html. "
-    "The pkg_resources package is slated for removal as early as "
-    "2025-11-30. Refrain from using this package or pin to "
-    "Setuptools<81.",
+    "pkg_resources is an obsolete package and should not be used. "
+    "It was removed in Setuptools v82.0.0 and is retained under "
+    "https://github.com/pypa/pkg_resources just for archival purposes. "
+    "The project is not actively maintained and newer code MUST not use it.",
     UserWarning,
     stacklevel=2,
 )
