@@ -66,7 +66,6 @@ from typing import (
     overload,
 )
 
-sys.path.extend(((vendor_path := os.path.join(os.path.dirname(os.path.dirname(__file__)), 'setuptools', '_vendor')) not in sys.path) * [vendor_path])  # fmt: skip
 # workaround for #4476
 sys.modules.pop('backports', None)
 
