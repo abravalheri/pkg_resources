@@ -1,0 +1,31 @@
+[build-system]
+requires = [
+  "setuptools>=82.0.0",
+  "setuptools-scm[simple]>=8",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pkg_resources"
+requires-python = ">=3.9"
+dynamic = ["version"]
+dependencies = [
+  "packaging>=24.2",
+  "jaraco.text>=3.7",
+  "platformdirs >= 4.2.2", # Made ctypes optional (see #4461)
+]
+
+[project.optional-dependencies]
+test = [
+	# upstream
+	"pytest >= 6, != 8.1.*",
+
+	# local
+	"jaraco.path>=3.7.2", # Typing fixes
+	"setuptools>=82.0.0", # tests require distutils
+	"jaraco.envs>=2.2",
+]
+
+[tool.setuptools]
+packages = ["pkg_resources"]
+package-dir = {pkg_resources = "."}
