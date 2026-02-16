@@ -12,7 +12,7 @@ dynamic = ["version"]
 dependencies = [
   "packaging>=24.2",
   "jaraco.text>=3.7",
-  "platformdirs >= 4.2.2", # Made ctypes optional (see #4461)
+  "platformdirs >= 4.2.2", # Made ctypes optional (see pypa/setuptools#4461)
 ]
 
 [project.optional-dependencies]

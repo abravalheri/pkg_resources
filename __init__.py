@@ -66,7 +66,7 @@ from typing import (
     overload,
 )
 
-# workaround for #4476
+# workaround for pypa/setuptools#4476
 sys.modules.pop('backports', None)
 
 # capture these to bypass sandboxing
